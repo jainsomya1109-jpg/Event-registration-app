@@ -34,7 +34,7 @@ function App() {
 
   const fetchRegistrations = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:8000/api/registrations');
+      const response = await axios.get('https://event-registration-app-xlwt.onrender.com//api/registrations');
       setRegistrations(response.data);
     } catch (error) {
       console.error('Error fetching registrations:', error);
@@ -65,7 +65,7 @@ function App() {
     e.preventDefault();
     setMessage('');
     try {
-      await axios.post('http://127.0.0.1:8000/api/register', formData);
+      await axios.post('https://event-registration-app-xlwt.onrender.com//api/register', formData);
       setMessage('🎉 Registration successful! See you at the event.');
       setIsSuccess(true);
       setFormData({
@@ -99,7 +99,7 @@ function App() {
   // Save Edit to FastAPI
   const handleSaveEdit = async (id) => {
     try {
-      await axios.put(`http://127.0.0.1:8000/api/registrations/${id}`, editFormData);
+      await axios.put(`https://event-registration-app-xlwt.onrender.com//api/registrations/${id}`, editFormData);
       setEditingId(null);
       fetchRegistrations(); // Refresh list
     } catch (error) {
