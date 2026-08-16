@@ -215,7 +215,7 @@ function App() {
                 <input
                   className="form-control"
                   type="password"
-                  placeholder="Passcode: admin123"
+                  placeholder="Enter password"
                   value={adminPassword}
                   onChange={(e) => setAdminPassword(e.target.value)}
                   required
