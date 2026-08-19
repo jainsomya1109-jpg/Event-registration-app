@@ -34,7 +34,7 @@ function App() {
 
   const fetchRegistrations = async () => {
     try {
-      const response = await axios.get('https://event-registration-app-xlwt.onrender.com//api/registrations');
+      const response = await axios.get('https://event-registration-app-xlwt.onrender.com/api/registrations');
       setRegistrations(response.data);
     } catch (error) {
       console.error('Error fetching registrations:', error);
